@@ -88,13 +88,3 @@ test('All Catogories are desplayed', async ({ page }) => {
   await expect(monitorCategory).toBeVisible();
 });
 
-
-test('get started link', async ({ page }) => {
-  await page.goto('https://www.demoblaze.com/#');
-
-  // Click the get started link.
-  await page.getByRole('link', { name: 'Get started' }).click();
-
-  // Expects page to have a heading with the name of Installation.
-  await expect(page.getByRole('heading', { name: 'Installation' })).toBeVisible();
-});
